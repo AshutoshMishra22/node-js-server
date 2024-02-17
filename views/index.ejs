@@ -1,25 +1,11 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Node js Server</title>
-	<link rel="stylesheet" href="/stylesheets/style.css"/>
-</head>
-<body>
-	<header>
-		<h1>Backend Server Homepage</h1>
-	</header>
-	<nav>
-		<ul>
-			<li><a href="/">Home</a></li>
-			<li><a href="/profile">Profile</a></li>
-			<li><a href="#">Contact</a></li>
-		</ul>
-	</nav>
-	<section>
-		<h2>Welcome to our backend server!</h2>
-		<p>We provide reliable and secure backend services for your web applications.</p>
-	</section>
-    <span><%= serverName %></span>
-    <script defer src="/javascripts/script.js"></script>
-</body>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+  </body>
 </html>

@@ -1,14 +1,15 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
+const plm = require('passport-local-mongoose');
 
-const dbName = "test";
+const dbName = 'node-mongodb';
 // DB setup
 mongoose.connect(`mongodb://127.0.0.1:27017/${dbName}`);
 
 // schema
 const userschema = mongoose.Schema({
   username: String,
-  name: String,
-  age: Number,
+  password: String,
+  secret: String,
 });
-
-module.exports = mongoose.model("user", userschema);
+userschema.plugin(plm);
+module.exports = mongoose.model('user', userschema);
